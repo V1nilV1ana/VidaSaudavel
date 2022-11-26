@@ -1,0 +1,63 @@
+<head>
+    <link rel="stylesheet" href="/public/css/feedb.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section >
+        <header>
+            <a href="/"><img src="/public/img/Logo---Vida-Saudável-e-CIA.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="/">Home</a></li>
+                <li><a href="/planos">Planos</a></li>
+                <li><a href="/deixefeed"class="active">FeedBack</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/auth/logout" class="act">Sair</a></li>
+                
+
+            </ul>
+        </header>
+    <main>
+        
+    
+    
+<div class="btt">
+    <h1>Deixe seu Feedback</h1>
+    <form action="/add" method="POST">
+    <label>Titulo:</label><br>
+    <input type="text" name="titulo"><br>
+    <label>Nota:</label><br>
+    <input type="number" name="nota" min="0" max="10"><br>
+    <label>Conteudo:</label><br>
+    <textarea name="conteudo"></textarea><br> 
+    <button type="submit">Enviar</button>
+</div>
+    </form>
+
+    {{#each Postreview}}
+    <div class="feeds">
+
+        <p><h3>{{titulo}}, Nota: {{nota}}</h3></p>
+        <br>
+        <p>{{conteudo}}</p>
+        <br>
+        <small>{{createdAt}}</small>
+        <a href="/delete/{{_id}}"><button id="btn">Apagar post</button></a><STYLE>A {text-decoration: none;} </STYLE>
+    </div>
+        {{/each}}
+        <br>
+        <br>
+
+        <br>
+
+    </main>
+    
+    <script src="/public/js/script.js"></script></section>
+        <footer>Projeto feito pelos alunos do 2° Semestre de ADS da Fecap - Vida Saudável & CIA 
+           <div class="logos">
+           <a href="" > <img src="/public/img/whats.png" alt="lwhats">   </a>
+           <a href="" > <img src="/public/img/instagram.png" alt="linsta"> </a>
+            </div>
+            </footer>
+</body>

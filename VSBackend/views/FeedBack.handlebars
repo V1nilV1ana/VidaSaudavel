@@ -1,0 +1,41 @@
+<head>
+    <link rel="stylesheet" href="/public/css/feedb.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section >
+        <header>
+            <a href="/"><img src="/public/img/Logo---Vida-Saudável-e-CIA.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="/">Home</a></li>
+                <li><a href="/planos">Planos</a></li>
+                <li><a href="/feedback"class="active">FeedBack</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/login" class="act">Entrar</a></li>
+            </ul>
+        </header>
+    <main>
+
+    {{#each Postreview}}
+    <div class="feeds">
+
+        <p><h3>{{titulo}}, Nota: {{nota}}</h3></p>
+        <br>
+        <p>{{conteudo}}</p>
+        <br>
+        <small>{{createdAt}}</small>
+    </div>
+        {{/each}}
+
+    </main>
+    
+    <script src="/public/js/script.js"></script></section>
+        <footer>Projeto feito pelos alunos do 2° Semestre de ADS da Fecap - Vida Saudável & CIA 
+           <div class="logos">
+           <a href="" > <img src="/public/img/whats.png" alt="lwhats">   </a>
+           <a href="" > <img src="/public/img/instagram.png" alt="linsta"> </a>
+            </div>
+            </footer>
+</body>

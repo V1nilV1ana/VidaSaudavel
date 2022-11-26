@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="/public/css/conta.css" type="text/css">
+</head>
+<body>
+    <form action="/auth/login" method="post">
+    <div class="container">
+        <div class="card">
+            <h1>Login</h1>
+            <div class="label-float">
+                <input type="text" name="email" required>
+                <label>Email</label>
+            </div>
+
+            <div class="label-float">
+                <input type="password" name="password" required>
+                <label>Senha</label>
+                <p id="esqueceu"> <a href="/perda"> Esqueceu sua senha?  </a> </p>
+            </div>
+            
+            <div class="justify-center">
+                <button type="submit">Entrar</button>
+            </div>
+    
+    </form>
+            <div class="justify-center">
+                <hr>
+            </div>
+            <p>Não tem conta? <a href="/cadastrar"> Cadastre-se </a> </p>
+        </div>
+    </div>
+    <script src="/public/js/script.js"></script></body>
+</body>
