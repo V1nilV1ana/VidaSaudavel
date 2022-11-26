@@ -131,7 +131,7 @@ width: 55%;
 }
 
 
-@media (max-width: 876px){
+@media (max-width: 1240px){
 
   .card-1{
       display: flex;
