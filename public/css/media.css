@@ -93,6 +93,10 @@
 }
 
 @media (max-width:782px){
+    .feed{
+        margin-top: 20%;
+    }
+
     .planos{
         justify-content: space-around;
         row-gap: 4em;
