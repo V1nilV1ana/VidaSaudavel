@@ -74,3 +74,4 @@ function funcao3(imgSlider) {
     document.getElementById("textBox").innerHTML = "Loremzinho.";
 }
 
+//estrela
