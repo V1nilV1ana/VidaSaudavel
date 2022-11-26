@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+
+}
+
+body{
+    background-image: linear-gradient(to right,#9adf9a, #069e9c,#fd9ab5);  
+    background-attachment: fixed;
+}  
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.card
+{
+    background-color:#ffffff;
+    padding: 50px;
+    border-radius: 4%;
+    
+}
+
+h1
+{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.label-float input
+{
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #D3F4D6;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float
+{
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+.label-float input:focus
+{
+border-bottom: 2px solid #D3F4D6;
+
+}
+#esqueceu{
+    color: #2dbd6e;
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    margin-top: 3px;
+    text-align: right;
+}
+
+.label-float label
+{
+    color: #000000;;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+input
+{
+    color: rgba(20, 20, 20, 0.805);
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label
+{
+    color: #000000;
+    font-size: 13px;
+    margin-top: 0;
+}
+
+button
+{
+    background-color: transparent;
+    border-color: #6beb75;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 20px;
+    border-radius: 21px;
+    cursor: pointer;
+    outline: none;
+    color: #000000;
+}
+
+button:hover
+{
+    background-color:#6beb75;
+    transition: all .4s ease-out;
+}
+
+.justify-center
+{
+    display: flex;
+    justify-content: center;
+}
+
+hr
+{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+}
+
+p
+{
+    color: #42d44e;
+    font-size: 14pt;
+    text-align: center;
+    padding: 10px;
+}
+
+a
+{
+
+    color: #42d44e;
+    text-decoration: none;
+}
+

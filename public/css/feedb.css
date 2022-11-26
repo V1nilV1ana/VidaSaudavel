@@ -1,0 +1,146 @@
+@font-face {
+  font-family:aca;
+  src: url(font/Mohave.otf);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+section{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #D3F4D6;
+}
+
+.textBox{
+max-width: 200px;
+max-height: 301;
+overflow: hidden;
+}
+
+
+
+header {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px 100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+header .logo{
+  position: relative;
+  max-width: 80px;
+}
+header ul {
+position: relative;
+display: flex;
+}
+header ul li{
+  list-style: none;
+}
+header ul li a{
+  display: inline-block;
+  color: #333 ;
+  font-weight: 400;
+  padding: 6px 15px;
+  margin-left: 40px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+background-color: #256125;
+color: rgb(255, 255, 255);
+}
+header .act
+{
+background-color: #68e68e;
+color: black;
+}
+
+textarea{
+  resize: none;
+}
+textarea:invalid{
+  border: 2px solid red;
+}
+.feeds {
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 10px;
+  border-color: #fad540;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #ffffff;
+margin-top: 20px;
+}
+.feeds p{
+  font-size:0.9em;
+  line-height: 1.4em;
+  font-weight: 500;
+  background-color: #ffffff;
+}
+.feeds h3{
+letter-spacing: 2px;
+font-family: aca;
+}
+
+main  strong{
+  font-family: aca;
+  letter-spacing: 2px;
+}
+button 
+{
+
+  background-color:#F0D362;
+    border-color: #fad540;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 10pt;
+    margin-top: 20px;
+    border-radius: 21px;
+    cursor: pointer;
+    outline: none;
+    color: #000000;
+
+}
+#btn{
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+#btn:hover
+{
+    background-color:#f06262;
+    transition: all rgb(240, 98, 98)-out;
+    border-color: #fa5c40;
+}
+button:hover
+{
+    background-color:#e1fa70;
+    transition: all rgb(178, 240, 98)-out;
+    border-color: #d8fa40;
+}
+.btt button{
+  font-size: 15px;
+}
+
+
+textarea{
+  width: 50%;
+  height: 200px;
+}
+
+
