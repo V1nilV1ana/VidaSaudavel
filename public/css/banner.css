@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap');
+
+
+#cont{
+	box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 5em auto;
+	height: 400px;
+	width: 1000px;
+  
+	
+}
+
+.product-details {
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	padding: 50px;
+	height: 100%;
+	float: left;
+	width: 50%;
+
+}
+
+#cont .product-details h1{
+	font-family: 'Bebas Neue', cursive;
+	display: inline-block;
+	position: relative;
+	font-size: 25px;
+	color: #344055;
+	margin: 0;
+	
+}
+a {
+    text-decoration: none;
+   }
+
+#cont .product-details > p {
+font-family: 'EB Garamond', serif;
+	text-align: center;
+	font-size: 18px;
+	color: #7d7d7d;
+    
+	
+}
+.control{
+	position: absolute;
+	bottom: 2%;
+	left: 28.8%;
+	
+}
+.bbt {
+
+	transform: translateY(0px);
+	transition: 0.3s linear;
+	background:  #28cf22;
+	border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: #eee;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.bbt:hover{transform: translateY(-6px);
+	background: #61eb55;}
+
+.bbt span {
+	font-family: 'Farsan', cursive;
+	transition: transform 0.3s;
+	display: inline-block;
+  padding: 10px 20px;
+	font-size: 1.2em;
+	margin:0;
+	
+}
+.bbt .price{
+	background: #333;
+	border: 0;
+	margin: 0;
+}
+
+.bbt .price {
+	transform: translateX(-10%); padding-right: 15px;
+}
+
+
+.bbt .buy {z-index: 3; font-weight: bolder;}
+
+.bbt:hover .price {transform: translateX(-110%);}
+
+
+
+
+
+.product-image {
+	transition: all 0.3s ease-out;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	float: right;
+	width: 50%;
+}
+
+#cont img {width: 100%;height: 100%;}
+
+
+@media (max-width: 1090px){
+    #cont{
+        box-shadow: 0 15px 30px 1px grey;
+        background: rgba(255, 255, 255, 0.90);
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 5em auto;
+        height: 400px;
+        width: 800px;
+        
+    }
+    .control{
+        position: absolute;
+        bottom: 2%;
+        left: 32.8%;
+        
+    }
+    #cont .product-details > p {
+        font-family: 'EB Garamond', serif;
+            text-align: center;
+            font-size: 18px;
+            color: #7d7d7d;
+            
+            
+        }
+        #cont .product-details h1{
+            font-family: 'Bebas Neue', cursive;
+            display: inline-block;
+            position: relative;
+            font-size: 24px;
+            color: #344055;
+            margin: 0;
+            
+        }
+    
+}
+@media (max-width: 991px){
+    .container{
+        margin-top: 100px;
+
+    }
+    #cont{
+        box-shadow: 0 15px 30px 1px grey;
+        background: rgba(255, 255, 255, 0.90);
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 5em auto;
+        height: 700px;
+        width: 700px;
+        
+    }
+    .control{
+        position: absolute;
+        bottom: 2%;
+        left: 40%;
+        
+    }
+    #cont {
+        display: flex;
+        flex-direction:column ;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .product-image{
+        width: 100%;
+        height: 250%;
+    }
+    .product-details{
+        width: 100%;
+        height: 150%;
+    }
+    .product-image img{
+        width: 100%;
+        min-height: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0px;
+    } 
+    .information{
+        width: 100%;
+        padding: 10px;
+    }
+    #cont .product-details > p {
+        font-family: 'EB Garamond', serif;
+            text-align: center;
+            font-size: 21px;
+            color: #7d7d7d;
+            
+            
+        }
+ 
+
+
+
+        @media (max-width: 730px){
+
+            .container{
+                margin-top: 100px;
+        
+            }
+            .control{
+                position: absolute;
+                bottom: 2%;
+                left: 35.8%;
+                
+            }
+            #cont{
+                box-shadow: 0 15px 30px 1px grey;
+                background: rgba(255, 255, 255, 0.90);
+                text-align: center;
+                border-radius: 5px;
+                overflow: hidden;
+                margin: 5em auto;
+                height: 500px;
+                width: 500px;
+           
+                
+            }
+            #cont {
+                display: flex;
+                flex-direction:column ;
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+            .product-image{
+                width: 100%;
+                height: 200%;
+            }
+            .product-details{
+                width: 100%;
+                height: 150%;
+            }
+            .product-image img{
+                width: 100%;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-left-radius: 0px;
+            } 
+            .information{
+                width: 100%;
+                padding: 10px;
+            }
+            .information p{
+            font-size: 0.5em;
+            }
+            #cont .product-details h1{
+                font-family: 'Bebas Neue', cursive;
+                display: inline-block;
+                position: relative;
+                font-size: 25px;
+                color: #344055;
+                margin: 0;
+                
+            }
+            #cont .product-details > p {
+                font-family: 'EB Garamond', serif;
+                    text-align: center;
+                    font-size: 15px;
+                    color: #7d7d7d;
+                    
+                    
+                }
+
+
+        }
+        .bbt span {
+            font-family: 'Farsan', cursive;
+            transition: transform 0.3s;
+            display: inline-block;
+          padding: 5px 10px;
+            font-size: 0.8em;
+            margin:0;
+            
+        }
+    }
+
+    @media (max-width: 530px){
+
+        .container{
+            margin-top: 100px;
+    
+        }
+        .control{
+            position: absolute;
+            bottom: 1%;
+            left: 30%;
+            
+        }
+        #cont{
+            box-shadow: 0 15px 30px 1px grey;
+            background: rgba(255, 255, 255, 0.90);
+            text-align: center;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 5em auto;
+            height: 550px;
+            width: 350px;
+       
+            
+        }
+        #cont {
+            display: flex;
+            flex-direction:column ;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .product-image{
+            width: 100%;
+            height: 150%;
+        }
+        .product-details{
+            width: 100%;
+            height: 150%;
+        }
+        .product-image img{
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 0px;
+        } 
+        .information{
+            width: 100%;
+            padding: 10px;
+        }
+        .information p{
+        font-size: 0.5em;
+        }
+        #cont .product-details h1{
+            font-family: 'Bebas Neue', cursive;
+            display: inline-block;
+            position: relative;
+            font-size: 16px;
+            color: #000000;
+            margin: 0;
+            
+        }
+        #cont .product-details > p {
+            font-family: 'EB Garamond', serif;
+                text-align: center;
+                font-size: 14px;
+                color: #7d7d7d;
+                
+                
+            }
+
+
+    }
+    .bbt span {
+        font-family: 'Farsan', cursive;
+        transition: transform 0.3s;
+        display: inline-block;
+      padding: 5px 10px;
+        font-size: 0.8em;
+        margin:0;
+        
+    }
