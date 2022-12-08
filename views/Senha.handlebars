@@ -9,22 +9,25 @@
     <link rel="stylesheet" href="/public/css/conta.css" type="text/css">
 </head>
 <body>
-    <form action="">
+    <form action="/auth/new-password" method="post">
     <div class="container">
         <div class="card">
             <h1>Nova Senha</h1>
             <div class="label-float">
-                <input type="password" name="senha" required>
-                <label for="senha">Nova Senha</label>
+                <input type="text" name="token" required>
+                <label for="token">Insira seu Token</label>
             </div>
-
             <div class="label-float">
-                <input type="password" name="nsenha" required>
-                <label for="senha">Repita a nova senha</label>
+                <input type="password" name="newpass" required>
+                <label for="nsenha">Nova Senha</label>
+            </div>
+            <div class="label-float">
+                <input type="password" name="password" required>
+                <label for="senha">Repita a Nova Senha</label>
             </div>
             
             <div class="justify-center">
-                <button>Salvar nova senha</button>
+                <button type="submit">Salvar nova senha</button>
             </div>
     </form>
             

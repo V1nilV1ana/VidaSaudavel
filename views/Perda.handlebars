@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="/public/css/conta.css" type="text/css">
 </head>
 <body>
-    <form action="/auth/login">
+    <form action="/auth/reset" method="post">
     <div class="container">
         <div class="card">
             <h1>Esqueceu a senha</h1>
             
             <div class="label-float">
-                <input type="email" name="username" required>
+                <input type="email" name="email" required>
                 <label for="email">E-MAIL</label>
             </div>
             
@@ -24,7 +24,6 @@
                 <button type="submit">Enviar</button>
             </div>
     </form>
-            <p><a href="/senha">Nova senha </a></p>
-        </div>
+            </div>
     </div>
 </body>

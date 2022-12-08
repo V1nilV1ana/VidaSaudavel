@@ -4,6 +4,9 @@ const User = require('../Models/User')
 const Postreview = require('../Models/Post')
 const bcrypt = require('bcrypt')
 const LocalStrategy = require('passport-local').Strategy
+const jwt = require('jsonwebtoken')
+const crypto = require('crypto')
+const mailer = require('../Models/mailer')
 
 passport.serializeUser((user, done) => done(null, user.id))
 passport.deserializeUser((id, done) => {
@@ -27,8 +30,11 @@ passport.use(new LocalStrategy({usernameField: 'email'}, function(email, passwor
 
             return done(null, user)
         })
+
     })
 }))
+
+
 
 //enviar html do servidor para o client
 router.get('/', (req, res) => {
@@ -101,6 +107,9 @@ router.get('/perda', function(req, res){
     }else
     res.render('Perda')
 })
+
+
+
 router.get('/senha', function(req, res){
     if(req.isAuthenticated()){
         res.redirect('/deixefeed')
@@ -109,8 +118,13 @@ router.get('/senha', function(req, res){
 })
 
 //cadastro de usuario
-router.post("/auth/register", async(req,res)=>{
+router.post("/auth/register", async(req,res, next)=>{
     try {
+        if(await User.findOne({ email: req.body.email })){
+            res.render('Cadastrar', {erro})
+            //return res.send({erro: true})
+        }
+
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         const registarUsers = await User.create({
             name: req.body.name,
@@ -120,7 +134,8 @@ router.post("/auth/register", async(req,res)=>{
         registarUsers.save()
         console.log(registarUsers)
         res.redirect("/login")
-    } catch (e) {
+        }
+        catch (e) {
         console.log(e)
         res.redirect("/cadastrar")
     }
@@ -132,6 +147,82 @@ router.post("/auth/login", passport.authenticate('local',{
     failureRedirect:"/login",
     failureFlash: true,
 }))
+
+//email
+router.post("/auth/reset", async(req,res)=>{
+    const { email } = req.body
+    try {
+        const user = await User.findOne({email})
+        if(!user){
+            return res.send("Usuario não encontrado")
+        }
+        const token = crypto.randomBytes(20).toString('hex')
+        const now = new Date()
+        now.setHours(now.getHours() + 1)
+
+        await User.findByIdAndUpdate(user.id, {
+            '$set': {
+                passwordResetToken: token,
+                passwordResetExpires: now,
+            }
+        })
+        mailer.sendMail({
+            to: email,
+            from: 'VidaSaudavel@vsteste.com',
+            subject: 'Ola envio de pedido de reset de senha',
+            template: 'forgotPassword',
+            context: { token},
+                        
+        }, (err) =>{
+        if(err)
+        {
+            console.log(err)
+            return res.send("Não foi possivel enviar o email")
+        }
+        return res.send("Email enviado com sucesso")
+    })
+    } catch (e) {
+        console.log(e)
+        res.redirect("/perda")
+    }
+})
+
+//senha
+router.post("/auth/new-password", async(req,res)=>{
+    const Token = req.body.token
+    const password = req.body.password
+    const npass = req.body.newpass
+    try {
+        const user = await User.findOne({passwordResetToken: Token})
+        if(!user){
+            return res.send("Usuario não encontrado")
+            
+        }
+        if(Token !== user.passwordResetToken){
+            return res.send("Token expirada")
+        }
+        const now = new Date()
+        if(now > user.passwordResetExpires){
+            return res.send("Tempo de troca excedido")
+            
+        }
+        if(password !== npass){
+            return res.send("As senhas não correspondem")
+        }
+        
+        
+        const hashedPassword = await bcrypt.hash(password, 10)
+        user.password = hashedPassword
+        await user.save()
+        res.redirect("/login")
+
+    } catch (erro) {
+        console.log(erro)
+        return res.send('não foi possivel resetar o password')
+        
+    }
+    
+} )
 
 //rota para enviar para a base de dados
 router.post('/add',function(req, res){
@@ -157,6 +248,10 @@ router.get('/delete/:id', function(req, res){
     })
 
 })
+
+
+
+
 
 //logout
 router.get("/auth/logout", function(req, res, next) {

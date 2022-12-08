@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="/public/css/conta.css" type="text/css">
 </head>
 <body>
+    {{#if erro}}
+    <h1>Esse email ja existe</h1>
+    {{/if}}
     <div class="container">
         <div class="card">
+
             <form action="/auth/register" method="POST">
             <h1>Cadastramento</h1>
             <div class="label-float">

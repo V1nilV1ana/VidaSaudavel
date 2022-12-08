@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="/public/css/feedb.css">
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="/public/css/media.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>FeedBack</title>
+    <title>Document</title>
 </head>
 <body>
     <section >
@@ -36,7 +35,8 @@
     <form action="/add" method="POST">
     <label>Titulo:</label><br>
     <input type="text" name="titulo"><br>
-    <input type="number" name="nota" min="0" max="5"><br>
+    <label>Nota:</label><br>
+    <input type="number" name="nota" min="0" max="10"><br>
     <label>Conteudo:</label><br>
     <textarea name="conteudo"></textarea><br> 
     <button type="submit">Enviar</button>
@@ -61,14 +61,11 @@
 
     </main>
     
-    
-    </section>
+    <script src="/public/js/script.js"></script></section>
         <footer>Projeto feito pelos alunos do 2° Semestre de ADS da Fecap - Vida Saudável & CIA 
            <div class="logos">
            <a href="" > <img src="/public/img/whats.png" alt="lwhats">   </a>
            <a href="" > <img src="/public/img/instagram.png" alt="linsta"> </a>
             </div>
             </footer>
-    <script src="/public/js/script.js"></script>
 </body>
-</html>
