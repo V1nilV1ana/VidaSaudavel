@@ -4,7 +4,6 @@ const User = require('../Models/User')
 const Postreview = require('../Models/Post')
 const bcrypt = require('bcrypt')
 const LocalStrategy = require('passport-local').Strategy
-const jwt = require('jsonwebtoken')
 const crypto = require('crypto')
 const mailer = require('../Models/mailer')
 
