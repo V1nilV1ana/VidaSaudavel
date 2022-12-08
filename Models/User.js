@@ -7,11 +7,20 @@ const userSchema = new Schema({
     },
     email:{
         type: String,
-        require: true
+        require: true,
+        unique: true
         },
     password:{
         type: String,
-        require: true
+        require: true,
+    },
+    passwordResetToken:{
+        type:String,
+        
+    },
+    passwordResetExpires:{
+        type: Date,
+        default: Date.now(),
     }
 }, {timestamps: true})
 
