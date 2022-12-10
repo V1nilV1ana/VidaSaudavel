@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="/public/css/conta.css" type="text/css">
 </head>
 <body>
-    {{#if erro}}
-    <h1>Esse email ja existe</h1>
-    {{/if}}
+    
     <div class="container">
         <div class="card">
-
+            {{#if message}}
+            <strong>{{message}}</strong>
+            {{/if}}
             <form action="/auth/register" method="POST">
             <h1>Cadastramento</h1>
             <div class="label-float">
@@ -26,8 +26,12 @@
                 <label>Nome</label>
             </div>
             <div class="label-float">
-                <input type="password" name="password" required minlength="6">
+                <input type="password" name="confpass" required minlength="6">
                 <label>Senha</label>
+            </div>
+            <div class="label-float">
+                <input type="password" name="password" required minlength="6">
+                <label>Repita a Senha</label>
             </div>
 
             <div class="justify-center">
