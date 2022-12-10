@@ -196,7 +196,7 @@ router.post("/auth/reset", async(req,res)=>{
             console.log(err)
             return res.render('Perda', {message: 'Não foi possivel enviar o email'})
         }
-        return res.render('Perda', {message: 'Email enviado com sucesso'})
+        return res.render('Perda', {messageSucess: 'Email enviado com sucesso'})
     })
     } catch (e) {
         console.log(e)
