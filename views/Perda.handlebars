@@ -12,6 +12,9 @@
     <form action="/auth/reset" method="post">
     <div class="container">
         <div class="card">
+            {{#if message}}
+            <strong>{{message}}</strong>
+            {{/if}}
             <h1>Esqueceu a senha</h1>
             
             <div class="label-float">
