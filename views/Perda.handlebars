@@ -13,8 +13,16 @@
     <div class="container">
         <div class="card">
             {{#if message}}
-            <strong>{{message}}</strong>
+            <div class="erro">
+            <strong >{{message}}</strong>
+            </div>
             {{/if}}
+            {{#if messageSucess}}
+            <div class="sucesso">
+            <strong class="sucesso">{{messageSucess}}</strong>
+            </div>
+            {{/if}}
+            
             <h1>Esqueceu a senha</h1>
             
             <div class="label-float">
