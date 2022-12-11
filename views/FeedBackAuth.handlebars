@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/public/css/feedb.css">
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="/public/css/media.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>FeedBack</title>
 </head>
 <body>
@@ -34,10 +33,11 @@
 <div class="btt">
     <h1>Deixe seu Feedback</h1>
     <form action="/add" method="POST">
-    <label>Titulo:</label><br>
-    <input type="text" name="titulo"><br>
-    <input type="number" name="nota" min="0" max="5"><br>
-    <label>Conteudo:</label><br>
+    <label>Titulo:</label>
+    <input type="text" name="titulo"><br><br>
+    <label>Nota</label>
+    <input type="number" name="nota" min="0" max="5"><br><br>
+    <label>Conteudo:</label>
     <textarea name="conteudo"></textarea><br> 
     <button type="submit">Enviar</button>
 </div>
