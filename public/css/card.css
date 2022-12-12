@@ -40,8 +40,11 @@
     text-decoration:underline
   }
 
+  .card{
+    margin-bottom: 50%;
+  }
   
-  
+
   .planos{
       grid-area: planos;
       justify-content: space-around;
@@ -57,12 +60,17 @@
   
   .card 
   {
+
       background-color: #F0D362;
       color: black;   
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
-      border-radius: 5px;
+      border-radius:50% 50% 5% 5%;
       
+  }
+
+  .fruts{
+    border-radius: 50% 50% 0% 0%; 
   }
   
   .card:hover 
@@ -72,11 +80,8 @@
   
     .container-card 
   {
+    
       padding: 10px 16px;
-  }
-    img 
-  {
-      border-radius: 5px 5px 0 0;
   }
   
   .orcamento{
@@ -131,7 +136,7 @@ width: 55%;
 }
 
 
-@media (max-width: 1240px){
+@media (max-width: 876px){
 
   .card-1{
       display: flex;

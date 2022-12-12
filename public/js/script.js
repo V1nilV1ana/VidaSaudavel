@@ -1,6 +1,9 @@
+
+
 function imgSlider(anything){
     document.querySelector('.frutas').src = anything;
     document.getElementById("textBox").innerHTML = "Praticar atividades físicas e ter uma boa noite de sono não é o suficiente para ter uma vida saudável. Para alcançar esse objetivo é necessário realizar escolhas que resultem em uma mente e um corpo saudáveis. E para conquistar isso é importante se alimentar bem.  ";
+
 }
 function imgSlider2(anything){
     document.querySelector('.frutas').src = anything;

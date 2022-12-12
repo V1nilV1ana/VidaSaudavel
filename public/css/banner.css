@@ -2,26 +2,29 @@
 
 
 #cont{
-	box-shadow: 0 15px 30px 1px grey;
-	background: rgba(255, 255, 255, 0.90);
 	text-align: center;
 	border-radius: 5px;
 	overflow: hidden;
 	margin: 5em auto;
-	height: 400px;
-	width: 1000px;
+	height: 300px;
+	width: 700px;
   
 	
 }
 
 .product-details {
+    transition: all 0.3s ease-out;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	float: right;
 	position: relative;
 	text-align: center;
 	overflow: hidden;
 	padding: 50px;
 	height: 100%;
 	float: left;
-	width: 50%;
+	width: 100%;
 
 }
 
@@ -57,7 +60,7 @@ a { color: inherit; }
 
 	transform: translateY(0px);
 	transition: 0.3s linear;
-	background:  #28cf22;
+	background:  #28cf225b;
 	border-radius: 5px;
   position: relative;
   overflow: hidden;
@@ -67,6 +70,7 @@ a { color: inherit; }
 	color: #eee;
 	padding: 0;
 	margin: 0;
+ 
 	
 }
 
@@ -83,7 +87,7 @@ a { color: inherit; }
 	
 }
 .bbt .price{
-	background: #333;
+	background: rgba(51, 51, 51, 0.808);
 	border: 0;
 	margin: 0;
 }
@@ -115,8 +119,6 @@ a { color: inherit; }
 
 @media (max-width: 1090px){
     #cont{
-        box-shadow: 0 15px 30px 1px grey;
-        background: rgba(255, 255, 255, 0.90);
         text-align: center;
         border-radius: 5px;
         overflow: hidden;
@@ -155,8 +157,7 @@ a { color: inherit; }
 
     }
     #cont{
-        box-shadow: 0 15px 30px 1px grey;
-        background: rgba(255, 255, 255, 0.90);
+
         text-align: center;
         border-radius: 5px;
         overflow: hidden;
@@ -215,8 +216,7 @@ a { color: inherit; }
             }
        
             #cont{
-                box-shadow: 0 15px 30px 1px grey;
-                background: rgba(255, 255, 255, 0.90);
+  
                 text-align: center;
                 border-radius: 5px;
                 overflow: hidden;
@@ -292,8 +292,7 @@ a { color: inherit; }
         }
 
         #cont{
-            box-shadow: 0 15px 30px 1px grey;
-            background: rgba(255, 255, 255, 0.90);
+
             text-align: center;
             border-radius: 5px;
             overflow: hidden;
