@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/public/css/feedb.css">
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="/public/css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>FeedBack</title>
 </head>
 <body>
@@ -31,17 +32,18 @@
     
     
 <div class="btt">
-    <h1>Deixe seu Feedback</h1>
+    <h1>Deixe seu Feedback</h1><br>
     <form action="/add" method="POST">
-    <label>Titulo:</label><br>
-    <input type="text" name="titulo"><br>
-    <label>Nota:</label><br>
-    <input type="number" name="nota" min="0" max="5"><br>
-    <label>Conteudo:</label><br>
-    <textarea name="conteudo"></textarea><br>
+    <label>Titulo</label><br>
+    <input type="text" name="titulo" required><br><br>
+    <label for="">Nota </label><br>
+    <input type="number" name="nota" min="0" max="10" required><br><br>
+    <label>Conteudo</label><br>
+    <textarea name="conteudo" required></textarea><br>
     <button type="submit">Enviar</button>
+     </form>
 </div>
-    </form>
+   
 
     {{#each Postreview}}
     <div class="feeds">
@@ -65,8 +67,9 @@
     </section>
         <footer>Projeto feito pelos alunos do 2° Semestre de ADS da Fecap - Vida Saudável & CIA 
            <div class="logos">
-           <a href="" > <img src="/public/img/whats.png" alt="lwhats">   </a>
-           <a href="" > <img src="/public/img/instagram.png" alt="linsta"> </a>
+           <a href="https://wa.me/5511966572565?text=Ol%C3%A1!%20Gostaria%20de%20realizar%20um%20or%C3%A7amento!%20"  target="_blank"> <img src="/public/img/whats.png" alt="lwhats">   </a>
+           <a href="https://instagram.com/vidasaudavel.ecia?igshid=YmMyMTA2M2Y="  target="_blank"> <img src="/public/img/instagram.png" alt="linsta"> </a>
+            
             </div>
             </footer>
     <script src="/public/js/script.js"></script>
