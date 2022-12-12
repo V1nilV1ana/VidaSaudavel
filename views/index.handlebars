@@ -20,7 +20,12 @@
                 <li><a href="/planos">Planos</a></li>
                 <li><a href="/feedback">FeedBack</a></li>
                 <li><a href="/faq">FAQ</a></li>
+                {{#if off}}
                 <li><a href="/login" class="act">Entrar</a></li>
+                {{/if}}
+                {{#if on}}
+                <li><a href="/auth/logout" class="act">Sair</a></li>
+                {{/if}}
             </ul>
         </header>
 
