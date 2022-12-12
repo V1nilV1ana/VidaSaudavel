@@ -22,7 +22,7 @@ passport.use(new LocalStrategy({
     User.findOne({email: email}, function(err, user){
         if(err) {return done(err)}
         if(!user){
-            return done(null, false, req.flash('erro', 'Esse email esta incorreto!'))
+            return done(null, false, req.flash('erro', 'Esse email esta incorreto'))
         }
         bcrypt.compare(password, user.password, function(err, isMatch){ 
             if(err) {return done(err)}
@@ -32,7 +32,7 @@ passport.use(new LocalStrategy({
                 return done(null, user)
 
             } else {
-              return done(null, false,  req.flash('erro', 'Essa senha esta incorreta!'))
+              return done(null, false,  req.flash('erro', 'Essa senha esta incorreta'))
             }
 
             
@@ -46,23 +46,23 @@ passport.use(new LocalStrategy({
 //enviar html do servidor para o client
 router.get('/', (req, res) => {
     if(req.isAuthenticated()){
-        res.render('index', {on: true})
+        res.render('indexAuth')
        }else
-        res.render('index', {off: true})
+        res.render('index')
 })
 
 router.get('/planos', function(req, res){
     if(req.isAuthenticated()){
-        res.render('Planos', {on: true})
+        res.render('PlanosAuth')
        }else
-        res.render('Planos', {off: true})
+        res.render('Planos')
 })
 
 router.get('/faq', function(req, res){
     if(req.isAuthenticated()){
-        res.render('FAQ', {on: true})
+        res.render('FAQAuth')
        }else
-        res.render('FAQ', {off: true})
+        res.render('FAQ')
 })
 
 router.get('/feedback', (req, res) => {
@@ -132,11 +132,11 @@ router.post("/auth/register", async(req,res, next)=>{
     
     try {
         if(password !== confpassword){
-            return res.render('Cadastrar', {message: 'As senhas estão diferentes!'})
+            return res.render('Cadastrar', {message: 'As senhas estão diferentes'})
              
         }
         if(await User.findOne({ email: req.body.email })){
-           return res.render('Cadastrar', {message: 'Esse email ja existe no nosso sistema!'})
+           return res.render('Cadastrar', {message: 'Esse email ja existe no nosso sistema'})
            
         }
         
@@ -171,7 +171,7 @@ router.post("/auth/reset", async(req,res)=>{
     try {
         const user = await User.findOne({email})
         if(!user){
-            return res.render('Perda', {message: 'Email não encontrado!'})
+            return res.render('Perda', {message: 'Email não encontrado'})
         }
         const token = crypto.randomBytes(20).toString('hex')
         const now = new Date()
@@ -194,9 +194,9 @@ router.post("/auth/reset", async(req,res)=>{
         if(err)
         {
             console.log(err)
-            return res.render('Perda', {message: 'Não foi possivel enviar o email!!'})
+            return res.render('Perda', {message: 'Não foi possivel enviar o email'})
         }
-        return res.render('Perda', {messageSucess: 'Email enviado com sucesso!!!'})
+        return res.render('Perda', {messageSucess: 'Email enviado com sucesso'})
     })
     } catch (e) {
         console.log(e)
@@ -212,19 +212,19 @@ router.post("/auth/new-password", async(req,res)=>{
     try {
         const user = await User.findOne({passwordResetToken: Token})
         if(!user){
-            return res.render('Senha', {message: 'Usuario não encontrado!!'})
+            return res.render('Senha', {message: 'Usuario não encontrado'})
             
         }
         if(Token !== user.passwordResetToken){
-            return res.render('Senha', {message: 'Token Incorreta!!'})
+            return res.render('Senha', {message: 'Token Incorreta'})
         }
         const now = new Date()
         if(now > user.passwordResetExpires){
-            return res.render('Senha', {message: 'Esse token expirou peça outro!!'})
+            return res.render('Senha', {message: 'Esse token expirou peça outro'})
             
         }
         if(password !== npass){
-            return res.render('Senha', {message: 'As senhas não batem!!'})
+            return res.render('Senha', {message: 'As senhas não batem'})
         }
         
         
@@ -235,7 +235,7 @@ router.post("/auth/new-password", async(req,res)=>{
 
     } catch (erro) {
         console.log('Não foi possivel resetar o password' + erro)
-        return res.render('Senha', {message: 'Não foi possivel resetar o password!!'})
+        return res.render('Senha', {message: 'Não foi possivel resetar o password'})
         
     }
     
