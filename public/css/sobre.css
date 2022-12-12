@@ -32,20 +32,6 @@ img{
     cursor: pointer;
 }
 
-.box:hover{transform: translateY(-6px);
-	background: #f1f5be;}
-
-    .box p {
-        overflow: hidden;
-    height: 0px;
-    text-align: center;
-    visibility: hidden;
-    transition: 0.5s ease-in-out;
-    }
-    .box:hover p{
-        height: 80px;
-        visibility: visible;
-    }
 
 
 .shop-container{
@@ -86,6 +72,44 @@ img{
     border: 2px solid #ebdbc8;
     color: var(--second-color);
 }
+.heading{
+
+align-items: center;
+    margin-top: -100px;
+}
+.box:hover{transform: translateY(-6px);
+    background: #f1f5be;}
+
+    .box p {
+        overflow: hidden;
+    height: 0px;
+    text-align: center;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+    }
+    .box:hover p{
+        height: 80px;
+        visibility: visible;
+    }
+
+@media(max-width:1090px){
+
+    .heading{
+    margin-top: -300px;
+    }
+}
+@media(max-width:991px){
+
+    .heading{
+    margin-top: -500px;
+    }
+}
+@media(max-width:730px){
+
+    .heading{
+    margin-top: -400px;
+    }
+}
 
 @media(max-width:766px) {
 
@@ -94,13 +118,44 @@ img{
     height: 150px;
     margin-top: -100px;
 }
+
 }
 
+@media(max-width:571px){
+    .box:hover{transform: translateY(-6px);
+        background: #f1f5be;}
+    
+        .box p {
+            overflow: hidden;
+        height: 0px;
+        text-align: center;
+        visibility: hidden;
+        transition: 0.5s ease-in-out;
+        }
+        .box:hover p{
+            height: 100px;
+            visibility: visible;
+        }
+    
+}
 @media(max-width:467px) {
     .shop-container .box .box-img{
         width: 200px;
         height: 150px;
         margin-top: -100px;
     }
-
+    .box:hover{transform: translateY(-6px);
+        background: #f1f5be;}
+    
+        .box p {
+            overflow: hidden;
+        height: 0px;
+        text-align: center;
+        visibility: hidden;
+        transition: 0.5s ease-in-out;
+        }
+        .box:hover p{
+            height: 150px;
+            visibility: visible;
+        }
 }
