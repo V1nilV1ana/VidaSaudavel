@@ -90,7 +90,18 @@
     {
         width: 100%;
     }
-}
+
+        .btt{
+            margin-top: 15%;
+        }
+    }
+
+    @media (max-width:903px){
+    .feed  {
+        margin-top: 10%;
+    }
+    }
+
 
 @media (max-width:782px){
     .feed{
@@ -115,7 +126,9 @@
       width: 70%;
   }
   /*banner*/
-
+  .btt{
+    margin-top: 15%;
+}
 }
 
 
